@@ -5,10 +5,10 @@
                 <NuxtLink to="/">Home</NuxtLink>
             </li>
             <li class="mr-6">
-                <NuxtLink to="/waitlist">Waitlist</NuxtLink>
+                <NuxtLink to="/product">Product</NuxtLink>
             </li>
             <li class="">
-                <NuxtLink to="/">FAQ</NuxtLink>
+                <NuxtLink to="/about">About</NuxtLink>
             </li>
         </ul>
     </div>
