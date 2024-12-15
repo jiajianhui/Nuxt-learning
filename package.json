@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.20.0",
+    "@vercel/analytics": "^1.4.1",
     "nuxt": "^3.14.1592",
+    "vite": "^6.0.3",
     "vue": "latest",
     "vue-router": "latest"
   }
