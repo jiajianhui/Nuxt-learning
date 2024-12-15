@@ -4,11 +4,11 @@
         <MiniLabel />
         
         <CommonPrimaryTitle />
-
+        
         <FeaturesBoxContainer>
             <FeaturesBoxHeader />
             <ContentDoc class="text-white/70 text-l mb-8" />
-            <UButton to="/" size="lg" color="black" variant="solid">返回首页</UButton>
+            <FeaturesBoxJoinButton />
         </FeaturesBoxContainer>
 
         
@@ -17,7 +17,7 @@
 
 <script>
   definePageMeta({
-    layout: 'about'
+    layout: 'article'
   })
 </script>
 

@@ -7,7 +7,7 @@
 
         <FeaturesBoxContainer>
             <FeaturesBoxHeader />
-            <FeaturesBoxDescription />
+            <ContentDoc class="text-white/70 text-l mb-8" />
             <UButton to="/" size="lg" color="black" variant="solid">返回首页</UButton>
         </FeaturesBoxContainer>
 

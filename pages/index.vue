@@ -4,10 +4,10 @@
         <MiniLabel />
         
         <CommonPrimaryTitle />
-
+        
         <FeaturesBoxContainer>
             <FeaturesBoxHeader />
-            <FeaturesBoxDescription />
+            <ContentDoc class="text-white/70 text-l mb-8" />
             <FeaturesBoxJoinButton />
         </FeaturesBoxContainer>
 

@@ -7,8 +7,11 @@
             <li class="mr-6">
                 <NuxtLink to="/product">Product</NuxtLink>
             </li>
-            <li class="">
+            <li class="mr-6">
                 <NuxtLink to="/about">About</NuxtLink>
+            </li>
+             <li class="">
+                <NuxtLink to="/article">Article</NuxtLink>
             </li>
         </ul>
     </div>
