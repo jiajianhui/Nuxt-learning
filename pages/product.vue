@@ -15,11 +15,13 @@
     </div>
 </template>
 
-<script>
-  definePageMeta({
-    layout: 'product'
-  })
+
+<script setup lang="ts">
+definePageMeta({
+  layout: 'product'
+})
 </script>
+
 
 
 <style>

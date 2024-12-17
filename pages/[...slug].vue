@@ -1,24 +1,21 @@
 <template>
-    <div class="main font-serif text-center flex flex-col justify-center  text-white min-h-screen">
+    <div class="main font-serif text-center flex justify-center  text-white min-h-screen">
 
-        <MiniLabel />
-        
-        <CommonPrimaryTitle />
-        
-        <FeaturesBoxContainer>
-            <FeaturesBoxHeader />
+        <FeaturesBoxContainer class="w-2/3">
             <ContentDoc class="text-white/70 text-l mb-8" />
-            <FeaturesBoxJoinButton />
+            <UButton to="/article" size="lg" color="black" variant="solid">回到文章列表</UButton>
         </FeaturesBoxContainer>
+        
+        
 
         
     </div>
 </template>
 
-<script>
-  definePageMeta({
-    layout: 'article'
-  })
+<script setup lang="ts">
+definePageMeta({
+  layout: 'article'
+})
 </script>
 
 
