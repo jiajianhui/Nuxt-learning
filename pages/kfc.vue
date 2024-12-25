@@ -5,7 +5,7 @@
         <CommonPrimaryTitle />
 
         <FeaturesBoxContainer>
-            <div class="markdown-body">
+            <div class="markdown-body" v-if="randomArticle">
                 <ContentRendererMarkdown :value="randomArticle"/>
             </div>
             
@@ -18,24 +18,22 @@
 
 <script setup lang="ts">
 
-// // 随机查询内容
-// const aaa = await queryContent('kfc').find()
-// const randomArticle = ref(null);
-// randomArticle.value = aaa[0]
-
 
 const randomArticle = ref(null)
-// 查询文件数
-const count = await queryContent('kfc').count()
 
-// 生成随机数
-const randomIndex = Math.floor(Math.random() * count)
+// 随机获取文章函数
+const getRandomArticle = async () => {
+    const count = await queryContent('kfc').count()
 
-// 查询所有数据
-const articles = await queryContent('kfc').find()
-randomArticle.value = articles[randomIndex]
+    const randomIndex = Math.floor(Math.random() * count)
 
+    const articles = await queryContent('kfc').find()
 
+    randomArticle.value = articles[randomIndex]
+}
+
+// 组件挂载后执行获取数据；不会在服务器端进行渲染，否则会渲染两次
+onMounted(getRandomArticle)
 
 
 definePageMeta({
