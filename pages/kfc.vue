@@ -1,5 +1,5 @@
 <template>
-    <div class=" mb-10 w-full font-serif text-center flex flex-col justify-center items-center text-white min-h-screen">
+    <div class="px-6 mb-10 w-full font-serif text-center flex flex-col justify-center items-center text-white min-h-screen">
 
         <CommonPrimaryTitle />
 
@@ -13,14 +13,24 @@
             <!-- artilce -->
             <div class="markdown-body" v-else-if="randomArticle">
                 <ContentRenderer :value="randomArticle">
-                    <img :src="randomArticle.image " :alt="randomArticle.title" class="w-full h-[240px] rounded-xl object-cover" >
+                    <div class="flex items-center w-full h-[240px] rounded-xl overflow-hidden border border-white/40 hover:border-white/80 transition-all duration-500 group">
+                        <img :src="randomArticle.image " :alt="randomArticle.title" class="object-cover group-hover:scale-105 transition-all duration-500" >
+                    </div>
+                    
                     <ContentRendererMarkdown :value="randomArticle"/>
+
+                    <!-- tag -->
+                    <div >
+                        <span v-for="tag in randomArticle.tags" :key="tag" class="p-2 mr-2 text-xs bg-black/20 hover:bg-black/40 transition-all rounded-lg">
+                            #{{ tag }}
+                        </span>
+                    </div>
                 </ContentRenderer>
                 
             </div>
             
             <!-- button -->
-            <button @click="refreshRandomArticle" class="px-6 py-2 mt-6 border rounded-md">随机更新文章</button>
+            <button @click="refreshRandomArticle" class="px-6 py-2 mt-6 border rounded-xl text-white bg-transparent hover:bg-white hover:text-black transition-all duration-500 ease-in-out">随机更新文章</button>
         </FeaturesBoxContainer>
 
         
